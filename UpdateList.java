@@ -104,7 +104,7 @@ public class UpdateList {
 	private static String checksum(File f) {
 		try {
 			Runtime rt = Runtime.getRuntime();
-			Process pr = rt.exec(new String[] {"md5sum", f.getPath()});
+			Process pr = rt.exec(new String[] {"md5", f.getPath()});
 			BufferedReader reader = new BufferedReader(new InputStreamReader(pr.getInputStream()));
 			pr.waitFor();
 			String md5 = reader.readLine();
